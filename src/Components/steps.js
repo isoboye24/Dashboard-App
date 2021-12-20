@@ -102,12 +102,12 @@ const Steps = () => {
                           <div className="col-2__help">
                             Help:
                             {Help.map((item) => {
-                              const { col1, col2, col3 } = item;
+                              const { id, text } = item;
                               return (
                                 <>
-                                  <div className="col1">{col1}</div>
-                                  <div className="col2">{col2}</div>
-                                  <div className="col3">{col3}</div>
+                                  <div className="col-2__help--text" key={id}>
+                                    {text + ", "}
+                                  </div>
                                 </>
                               );
                             })}

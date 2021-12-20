@@ -8,12 +8,17 @@
   .row {
     height: 10.2rem;
     width: 58.3rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $gray;
+    }
+
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
     grid-gap: 1rem;
 
     .col-1 {
-      background-color: green;
+      // background-color: green;
       display: flex;
 
       .shape {
@@ -166,7 +171,7 @@
     }
 
     .col-2 {
-      background-color: yellow;
+      // background-color: yellow;
       height: 10.2rem;
       width: 29.8rem;
       font-family: Open Sans;
@@ -202,11 +207,15 @@
         color: #4a4a4a;
         margin: 6px 0px;
 
-        &--col1 {
-        }
-        &--col2 {
-        }
-        &--col3 {
+        &--text {
+          &:first-child {
+            margin-left: 3px;
+          }
+
+          color: $blue;
+          &:not(:last-child) {
+            margin-right: 3px;
+          }
         }
       }
     }

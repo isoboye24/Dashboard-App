@@ -12,7 +12,7 @@ function App() {
         </div>
         <Resolution />
         <Block />
-        {/* <Steps /> */}
+        <Steps />
       </div>
     </>
   );

@@ -1,9 +1,9 @@
 import React from "react";
 import {
   FaFilter,
-  FaCartArrowDown,
-  FaHandPointUp,
   FaLongArrowAltDown,
+  FaHandPointUp,
+  FaCartArrowDown,
 } from "react-icons/fa";
 
 export const resolutionData = [
@@ -110,9 +110,12 @@ export const steps = [
             statement: "You get 100% traffic on mobile and desktop devices",
             Help: [
               {
-                col1: "Searches",
-                col2: "Pessimisations",
-                col3: "",
+                id: 1,
+                text: "Searches",
+              },
+              {
+                id: 2,
+                text: "Pessimisations",
               },
             ],
           },
@@ -126,34 +129,30 @@ export const steps = [
       {
         col1: [
           {
-            grandChild1: [
+            shape: [
               {
                 icon1: <FaHandPointUp />,
                 icon2: <FaLongArrowAltDown />,
               },
             ],
-            grandChild2: [
+            content: [
               {
-                greatChild: [
+                action: [
                   {
-                    action: [
-                      {
-                        actionValue: "Clicks",
-                        percent: "-13%",
-                      },
-                    ],
-                    number1: [
-                      {
-                        numberValue: "243",
-                        percent: "Yesterday",
-                      },
-                    ],
-                    number2: [
-                      {
-                        numberValue: "280",
-                        percent: "Last friday",
-                      },
-                    ],
+                    actionValue: "Clicks",
+                    percent: "-13%",
+                  },
+                ],
+                number1: [
+                  {
+                    score: "243",
+                    yesterday: "Yesterday",
+                  },
+                ],
+                number2: [
+                  {
+                    score: "280",
+                    lastFriday: "Last friday",
                   },
                 ],
               },
@@ -167,9 +166,12 @@ export const steps = [
             statement: "Conversion from searches to clicks on all devices",
             Help: [
               {
-                col1: "CTR",
-                col2: "Cliks",
-                col3: "",
+                id: 1,
+                text: "CTR",
+              },
+              {
+                id: 2,
+                text: "Clicks",
               },
             ],
           },
@@ -183,33 +185,30 @@ export const steps = [
       {
         col1: [
           {
-            grandChild1: [
+            shape: [
               {
                 icon1: <FaCartArrowDown />,
+                icon2: <FaLongArrowAltDown />,
               },
             ],
-            grandChild2: [
+            content: [
               {
-                greatChild: [
+                action: [
                   {
-                    action: [
-                      {
-                        actionValue: "Sales",
-                        percent: "",
-                      },
-                    ],
-                    number1: [
-                      {
-                        numberValue: "24",
-                        percent: "Yesterday",
-                      },
-                    ],
-                    number2: [
-                      {
-                        numberValue: "24",
-                        percent: "Last friday",
-                      },
-                    ],
+                    actionValue: "Sales",
+                    percent: "",
+                  },
+                ],
+                number1: [
+                  {
+                    score: "24",
+                    yesterday: "Yesterday",
+                  },
+                ],
+                number2: [
+                  {
+                    score: "24",
+                    lastFriday: "Last friday",
                   },
                 ],
               },
@@ -219,13 +218,20 @@ export const steps = [
         col2: [
           {
             header: "STR: 6.2%",
-            subHeader: "Avg.Check: 8 903",
+            subHeader: "Avg.Check 8 903",
             statement: "Conversion from clicks to bookings on all devices",
             Help: [
               {
-                col1: "STR",
-                col2: "Bookings",
-                col3: "Avg.Check",
+                id: 1,
+                text: "CTR",
+              },
+              {
+                id: 2,
+                text: "CliBookingscks",
+              },
+              {
+                id: 3,
+                text: "Avg.Check",
               },
             ],
           },
