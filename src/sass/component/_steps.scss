@@ -6,215 +6,157 @@
   top: 31.3rem;
 
   .row {
-    height: 10.2rem;
-    width: 58.3rem;
-
+    // height: 10.2rem;
+    // width: 58.3rem;
     &:not(:last-child) {
       border-bottom: 1px solid $gray;
     }
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
-    grid-gap: 1rem;
+    grid-template-columns: 4.8rem 1fr;
+    grid-gap: 2rem;
 
     .col-1 {
-      // background-color: green;
-      display: flex;
+      background-color: yellow;
 
-      .shape {
-        display: flex;
-        flex-direction: columns;
-
-        &--oval {
-          height: 48px;
-          width: 48px;
-          border-radius: 50%;
-          background-color: $blue;
-        }
-        &--line {
-          height: 78px;
-          width: 10px;
-          background-color: $line-color;
-        }
+      &--oval {
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        background-color: $blue;
       }
-
-      .content {
-        display: flex;
-        flex-direction: columns;
-
-        height: 94.5999984741211px;
-        width: 132px;
-
-        .action {
-          flex: 1;
-          order: 1;
-          display: flex;
-          flex-direction: rows;
-          height: 28px;
-          width: 129px;
-
-          &__col1 {
-            position: absolute;
-            height: 28px;
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 28px;
-            color: #4a4a4a;
-          }
-          &__col2 {
-            &--rectangle {
-              position: relative;
-              height: 18px;
-              width: 37px;
-              border-radius: 10px;
-              background: #8bc34a;
-              &-text {
-                position: absolute;
-                height: 14px;
-                left: 35.78%;
-                right: 62.27%;
-                top: calc(50% - 14px / 2 - 64.7px);
-
-                font-family: Open Sans;
-                font-style: normal;
-                font-weight: 600;
-                font-size: 12px;
-                line-height: 14px;
-
-                text-align: center;
-
-                color: #ffffff;
-              }
-            }
-          }
-        }
-        .number1 {
-          flex: 1;
-          order: 1;
-
-          display: grid;
-          height: 28px;
-          width: 129px;
-
-          &__col1 {
-            position: absolute;
-            height: 28px;
-            left: 29.22%;
-            right: 65.86%;
-            top: calc(50% - 28px / 2 - 26.5px);
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 28px;
-
-            color: #4a4a4a;
-          }
-          &__col2 {
-            position: absolute;
-            height: 17px;
-            left: 34.92%;
-            right: 60.7%;
-            top: calc(50% - 17px / 2 - 27px);
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 16px;
-            color: #4a4a4a;
-          }
-        }
-        .number2 {
-          flex: 1;
-          order: 1;
-
-          display: grid;
-          height: 28px;
-          width: 129px;
-          &__col1 {
-            position: absolute;
-            height: 28px;
-            left: 29.22%;
-            right: 65.86%;
-            top: calc(50% - 28px / 2 + 6.5px);
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 20px;
-            line-height: 28px;
-
-            color: #a0b0b9;
-          }
-          &__col2 {
-            position: absolute;
-            height: 17px;
-            left: 34.92%;
-            right: 60.47%;
-            top: calc(50% - 17px / 2 + 4px);
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 16px;
-
-            color: #a0b0b9;
-          }
-        }
+      &--line {
+        height: 78px;
+        width: 10px;
+        background-color: $line-color;
       }
     }
 
     .col-2 {
-      // background-color: yellow;
-      height: 10.2rem;
-      width: 29.8rem;
-      font-family: Open Sans;
-      font-style: normal;
-      position: static;
+      display: grid;
+      grid-template-columns: 13.2rem 29.8rem;
+      grid-gap: 8.5rem;
 
-      &__header,
-      &__subHeader {
-        height: 28px;
+      .left-contents {
+        // background-color: green;
 
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 28px;
+        .action {
+          height: 28px;
+          display: flex;
 
-        color: #4a4a4a;
-      }
-
-      &__statement {
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 16px;
-        color: #a0b0b9;
-        margin: 6px 0px;
-      }
-      &__help {
-        display: flex;
-        flex-direction: row;
-
-        height: 17px;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 17px;
-        color: #4a4a4a;
-        margin: 6px 0px;
-
-        &--text {
-          &:first-child {
-            margin-left: 3px;
+          &__actionValue {
+            font-family: Open Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 28px;
+            letter-spacing: 0px;
           }
+          &__percent {
+            &--rectangle {
+              position: relative;
 
-          color: $blue;
-          &:not(:last-child) {
-            margin-right: 3px;
+              background: #8bc34a;
+              border-radius: 1rem;
+            }
+            &--text {
+              position: absolute;
+              font-family: Open Sans;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 14px;
+              letter-spacing: 0px;
+              text-align: center;
+            }
+          }
+        }
+
+        .number1 {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: normal;
+          display: flex;
+
+          &__score {
+            height: 28px;
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 28px;
+
+            color: #4a4a4a;
+          }
+          &__text {
+            height: 17px;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 16px;
+            color: #4a4a4a;
+          }
+        }
+
+        .number2 {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: normal;
+          display: flex;
+
+          &__score {
+            font-size: 16px;
+          }
+          &__text {
+            font-size: 12px;
+            color: #a0b0b9;
+          }
+        }
+      }
+      .right-contents {
+        // background-color: rgb(151, 75, 4);
+
+        font-family: Open Sans;
+        font-style: normal;
+        position: static;
+
+        &__header,
+        &__subHeader {
+          height: 28px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 28px;
+          color: #4a4a4a;
+        }
+
+        &__statement {
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 16px;
+          color: #a0b0b9;
+          margin: 6px 0px;
+        }
+        &__help {
+          display: flex;
+
+          height: 17px;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 17px;
+          color: #4a4a4a;
+          margin: 6px 0px;
+
+          &--text {
+            &:first-child {
+              margin-left: 3px;
+            }
+
+            color: $blue;
+            &:not(:last-child) {
+              margin-right: 3px;
+            }
           }
         }
       }

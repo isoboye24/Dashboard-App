@@ -73,13 +73,13 @@ export const steps = [
       {
         col1: [
           {
-            shape: [
-              {
-                icon1: <FaFilter />,
-                icon2: <FaLongArrowAltDown />,
-              },
-            ],
-            content: [
+            icon1: <FaFilter />,
+            icon2: <FaLongArrowAltDown />,
+          },
+        ],
+        col2: [
+          {
+            left_contents: [
               {
                 action: [
                   {
@@ -101,21 +101,22 @@ export const steps = [
                 ],
               },
             ],
-          },
-        ],
-        col2: [
-          {
-            header: "Mobile traffic: 100%",
-            subHeader: "Web traffic: 100%",
-            statement: "You get 100% traffic on mobile and desktop devices",
-            Help: [
+
+            right_contents: [
               {
-                id: 1,
-                text: "Searches",
-              },
-              {
-                id: 2,
-                text: "Pessimisations",
+                header: "Mobile traffic: 100%",
+                subHeader: "Web traffic: 100%",
+                statement: "You get 100% traffic on mobile and desktop devices",
+                Help: [
+                  {
+                    id: 1,
+                    text: "Searches",
+                  },
+                  {
+                    id: 2,
+                    text: "Pessimisations",
+                  },
+                ],
               },
             ],
           },
@@ -129,13 +130,13 @@ export const steps = [
       {
         col1: [
           {
-            shape: [
-              {
-                icon1: <FaHandPointUp />,
-                icon2: <FaLongArrowAltDown />,
-              },
-            ],
-            content: [
+            icon1: <FaHandPointUp />,
+            icon2: <FaLongArrowAltDown />,
+          },
+        ],
+        col2: [
+          {
+            left_contents: [
               {
                 action: [
                   {
@@ -157,21 +158,22 @@ export const steps = [
                 ],
               },
             ],
-          },
-        ],
-        col2: [
-          {
-            header: "CTR: 0,04%",
-            subHeader: "",
-            statement: "Conversion from searches to clicks on all devices",
-            Help: [
+
+            right_contents: [
               {
-                id: 1,
-                text: "CTR",
-              },
-              {
-                id: 2,
-                text: "Clicks",
+                header: "CTR 0,04%",
+                subHeader: "",
+                statement: "Conversion from searches to clicks on all devices",
+                Help: [
+                  {
+                    id: 1,
+                    text: "CTR",
+                  },
+                  {
+                    id: 2,
+                    text: "Clicks",
+                  },
+                ],
               },
             ],
           },
@@ -185,18 +187,17 @@ export const steps = [
       {
         col1: [
           {
-            shape: [
-              {
-                icon1: <FaCartArrowDown />,
-                icon2: <FaLongArrowAltDown />,
-              },
-            ],
-            content: [
+            icon1: <FaCartArrowDown />,
+            icon2: <FaLongArrowAltDown />,
+          },
+        ],
+        col2: [
+          {
+            left_contents: [
               {
                 action: [
                   {
                     actionValue: "Sales",
-                    percent: "",
                   },
                 ],
                 number1: [
@@ -213,25 +214,26 @@ export const steps = [
                 ],
               },
             ],
-          },
-        ],
-        col2: [
-          {
-            header: "STR: 6.2%",
-            subHeader: "Avg.Check 8 903",
-            statement: "Conversion from clicks to bookings on all devices",
-            Help: [
+
+            right_contents: [
               {
-                id: 1,
-                text: "CTR",
-              },
-              {
-                id: 2,
-                text: "CliBookingscks",
-              },
-              {
-                id: 3,
-                text: "Avg.Check",
+                header: "STR: 6.2%",
+                subHeader: "Avg.Check: 8 903",
+                statement: "Conversion from clicks to bookings on all devices",
+                Help: [
+                  {
+                    id: 1,
+                    text: "STR",
+                  },
+                  {
+                    id: 2,
+                    text: "Bookings",
+                  },
+                  {
+                    id: 3,
+                    text: "Avg.Check",
+                  },
+                ],
               },
             ],
           },
