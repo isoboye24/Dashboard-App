@@ -1,0 +1,36 @@
+.resolution {
+  position: absolute;
+  height: 3.2rem;
+  left: 4rem;
+  top: 9.3rem;
+  display: flex;
+  flex-direction: row;
+
+  &__box {
+    border: 1px solid #d9d9d9;
+    width: 9.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--content {
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 1.4rem;
+      line-height: 100%;
+      color: #4a4a4a;
+    }
+  }
+
+  &__active {
+    background: $blue !important;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9.2rem;
+    height: 3.2rem;
+  }
+}

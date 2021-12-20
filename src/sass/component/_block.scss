@@ -1,0 +1,105 @@
+.block {
+  width: $grid-width;
+  position: absolute;
+  left: 4rem;
+  top: 16.94rem;
+  margin-bottom: 4.4rem;
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 3fr));
+    grid-column-gap: 7rem;
+
+    .col {
+      display: flex;
+
+      .check__icon {
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        margin-right: 0.8rem;
+
+        background: $green;
+        border: 2px solid #ffffff;
+      }
+      .texts {
+        font-family: Open Sans;
+        font-style: normal;
+        font-weight: 600;
+        margin-top: -0.5rem;
+        // background: red;
+
+        h3 {
+          font-size: 16px;
+          line-height: 28px;
+          color: #4a4a4a;
+        }
+        h4 {
+          font-size: 12px;
+          line-height: 16px;
+          color: #a0b0b9;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    height: 45px;
+    margin-top: 1.5rem;
+
+    .stroke {
+      height: 0.8rem;
+      display: grid;
+      grid-template-columns: 4fr 3fr 2fr 1fr;
+      grid-column-gap: 0.1rem;
+
+      .col {
+        &__1 {
+          background-color: $yellow;
+        }
+
+        &__2 {
+          background-color: $purple;
+        }
+
+        &__3 {
+          background-color: $blue;
+        }
+
+        &__4 {
+          background-color: $gray;
+        }
+      }
+    }
+
+    .bottom__content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(6.1rem, 4fr));
+      grid-column-gap: 4rem;
+      margin-top: 2rem;
+
+      .content__container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        .dot {
+          height: 10px;
+          width: 10px;
+          border-radius: 2px;
+          margin-right: 0.5rem;
+        }
+
+        .content {
+          font-family: Open Sans;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 16px;
+          color: #4a4a4a;
+          margin-top: -0.1rem;
+        }
+      }
+    }
+  }
+}
