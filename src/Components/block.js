@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { blockTopValues, blockBottomValues } from "./../data";
 
 const Block = () => {
+  // const [totalValue, setTotalValue] = useState(0);
+  const totalValue = blockBottomValues.reduce(
+    (tot, curr) => tot + curr.value,
+    0
+  );
   return (
     <>
       <div className="block">
@@ -21,21 +26,37 @@ const Block = () => {
         </div>
         <div className="block__bottom">
           <div className="stroke">
-            <div className="col col__1"></div>
-            <div className="col col__2"></div>
-            <div className="col col__3"></div>
-            <div className="col col__4"></div>
+            {blockBottomValues.map((item) => {
+              const { id, boxColor, value } = item;
+              return (
+                <span
+                  className="col"
+                  key={id}
+                  style={{
+                    backgroundColor: `${boxColor}`,
+                    width: `${(value / totalValue) * 60.8}rem`,
+                  }}
+                ></span>
+              );
+            })}
+            {/* <span className="col col__1">{totalValue}</span>
+            <span className="col col__2"></span>
+            <span className="col col__3"></span>
+            <span className="col col__4"></span> */}
           </div>
           <div className="bottom__content">
             {blockBottomValues.map((content) => {
-              const { id, boxColor, contentValue } = content;
+              const { id, boxColor, text, value } = content;
               return (
                 <div className="content__container" key={id}>
                   <div
                     className="dot"
                     style={{ backgroundColor: `${boxColor}` }}
                   ></div>
-                  <div className="content">{contentValue}</div>
+                  <div className="content">
+                    <span className="content__text">{text}</span>
+                    <span className="content__value">{value}</span>
+                  </div>
                 </div>
               );
             })}

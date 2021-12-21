@@ -47,22 +47,26 @@ export const blockBottomValues = [
   {
     id: 1,
     boxColor: "#ffcc00",
-    contentValue: "Error: 500 1 256",
+    text: "Error 500:",
+    value: 1256,
   },
   {
     id: 2,
     boxColor: "#5856d5",
-    contentValue: "Error: 501 800",
+    text: "Error 501:",
+    value: 800,
   },
   {
     id: 3,
     boxColor: "#8bc34a",
-    contentValue: "Error: 502 650",
+    text: "Error 502:",
+    value: 650,
   },
   {
     id: 4,
     boxColor: "#a0b0b9",
-    contentValue: "Other 330",
+    text: "Other",
+    value: 330,
   },
 ];
 
@@ -71,20 +75,20 @@ export const steps = [
     id: 1,
     row: [
       {
-        col1: [
+        icons: [
           {
             icon1: <FaFilter />,
             icon2: <FaLongArrowAltDown />,
           },
         ],
-        col2: [
+        contents: [
           {
-            left_contents: [
+            records: [
               {
                 action: [
                   {
                     actionValue: "Searches",
-                    percent: "+5%",
+                    percent: 5,
                   },
                 ],
                 number1: [
@@ -102,7 +106,7 @@ export const steps = [
               },
             ],
 
-            right_contents: [
+            descriptions: [
               {
                 header: "Mobile traffic: 100%",
                 subHeader: "Web traffic: 100%",
@@ -128,20 +132,20 @@ export const steps = [
     id: 2,
     row: [
       {
-        col1: [
+        icons: [
           {
             icon1: <FaHandPointUp />,
             icon2: <FaLongArrowAltDown />,
           },
         ],
-        col2: [
+        contents: [
           {
-            left_contents: [
+            records: [
               {
                 action: [
                   {
                     actionValue: "Clicks",
-                    percent: "-13%",
+                    percent: -13,
                   },
                 ],
                 number1: [
@@ -159,7 +163,7 @@ export const steps = [
               },
             ],
 
-            right_contents: [
+            descriptions: [
               {
                 header: "CTR 0,04%",
                 subHeader: "",
@@ -185,19 +189,20 @@ export const steps = [
     id: 3,
     row: [
       {
-        col1: [
+        icons: [
           {
             icon1: <FaCartArrowDown />,
             icon2: <FaLongArrowAltDown />,
           },
         ],
-        col2: [
+        contents: [
           {
-            left_contents: [
+            records: [
               {
                 action: [
                   {
                     actionValue: "Sales",
+                    percent: 0,
                   },
                 ],
                 number1: [
@@ -215,7 +220,7 @@ export const steps = [
               },
             ],
 
-            right_contents: [
+            descriptions: [
               {
                 header: "STR: 6.2%",
                 subHeader: "Avg.Check: 8 903",

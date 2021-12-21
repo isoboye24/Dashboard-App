@@ -40,7 +40,7 @@
       grid-gap: 8.5rem;
 
       &:not(:last-child) {
-        border-bottom: 1px solid $gray;
+        border: 1px solid red;
       }
 
       .left-contents {
@@ -57,14 +57,26 @@
             font-weight: 600;
             line-height: 28px;
             letter-spacing: 0px;
+            color: $black;
+
+            &-negative {
+              color: $red;
+            }
           }
           &__percent {
+            margin-top: 0.5rem;
             &--rectangle {
               height: 1.8rem;
               width: 3.7rem;
               position: relative;
               border-radius: 1rem;
-              background-color: $green;
+
+              &-positive {
+                background-color: $green;
+              }
+              &-negative {
+                background-color: $red;
+              }
             }
             &--text {
               position: absolute;
@@ -91,11 +103,12 @@
 
           &__score {
             font-size: 20px;
-            color: #4a4a4a;
+            color: $black;
           }
           &__text {
+            margin-top: 0.3rem;
             font-size: 12px;
-            color: #4a4a4a;
+            color: $black;
           }
         }
 
@@ -119,8 +132,6 @@
         }
       }
       .right-contents {
-        // background-color: rgb(151, 75, 4);
-
         font-family: Open Sans;
         font-style: normal;
         position: static;
@@ -131,14 +142,21 @@
           font-weight: 600;
           font-size: 16px;
           line-height: 28px;
-          color: #4a4a4a;
+          color: $black;
+
+          &-positive {
+            color: $black;
+          }
+          &-negative {
+            color: $red;
+          }
         }
 
         &__statement {
           font-weight: normal;
           font-size: 12px;
           line-height: 16px;
-          color: #a0b0b9;
+          color: $gray;
           margin: 6px 0px;
         }
         &__help {
@@ -148,7 +166,7 @@
           font-weight: normal;
           font-size: 12px;
           line-height: 17px;
-          color: #4a4a4a;
+          color: $black;
           margin: 6px 0px;
 
           &--text {
