@@ -84,7 +84,7 @@ export const steps = [
                 action: [
                   {
                     actionValue: "Searches",
-                    percent: "5%",
+                    percent: "+5%",
                   },
                 ],
                 number1: [

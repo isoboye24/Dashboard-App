@@ -1,11 +1,8 @@
 .bg {
-  position: absolute;
   height: 77.5rem;
   width: 74.8rem;
-  left: 50%;
+  @include perfectCenter;
   border-radius: 1rem;
-  top: 50%;
-  transform: translate(-50%, -50%);
   background: #ffffff;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;

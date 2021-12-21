@@ -6,29 +6,31 @@
   top: 31.3rem;
 
   .row {
-    // height: 10.2rem;
-    // width: 58.3rem;
-    &:not(:last-child) {
-      border-bottom: 1px solid $gray;
-    }
-
     display: grid;
     grid-template-columns: 4.8rem 1fr;
     grid-gap: 2rem;
 
     .col-1 {
-      background-color: yellow;
+      position: relative;
+      display: grid;
+      grid-template-rows: 4.8rem 7.8rem;
 
-      &--oval {
-        height: 48px;
-        width: 48px;
+      &__oval {
+        position: relative;
+        height: 4.8rem;
+        width: 4.8rem;
         border-radius: 50%;
         background-color: $blue;
+
+        &--icon {
+          @include perfectCenter;
+          font-size: 1.6rem;
+          color: white;
+        }
       }
-      &--line {
+      &__line {
         height: 78px;
         width: 10px;
-        background-color: $line-color;
       }
     }
 
@@ -37,12 +39,16 @@
       grid-template-columns: 13.2rem 29.8rem;
       grid-gap: 8.5rem;
 
-      .left-contents {
-        // background-color: green;
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray;
+      }
 
+      .left-contents {
         .action {
           height: 28px;
-          display: flex;
+          display: grid;
+          grid-template-columns: repeat(2, 8rem);
+          grid-column-gap: 0rem;
 
           &__actionValue {
             font-family: Open Sans;
@@ -54,10 +60,11 @@
           }
           &__percent {
             &--rectangle {
+              height: 1.8rem;
+              width: 3.7rem;
               position: relative;
-
-              background: #8bc34a;
               border-radius: 1rem;
+              background-color: $green;
             }
             &--text {
               position: absolute;
@@ -67,7 +74,9 @@
               font-weight: 600;
               line-height: 14px;
               letter-spacing: 0px;
-              text-align: center;
+              color: #ffffff;
+
+              @include perfectCenter;
             }
           }
         }
@@ -76,26 +85,16 @@
           font-family: Open Sans;
           font-style: normal;
           font-weight: normal;
-          display: flex;
+          display: grid;
+          grid-template-columns: repeat(2, 8rem);
+          grid-column-gap: 0rem;
 
           &__score {
-            height: 28px;
-
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
             font-size: 20px;
-            line-height: 28px;
-
             color: #4a4a4a;
           }
           &__text {
-            height: 17px;
-            font-family: Open Sans;
-            font-style: normal;
-            font-weight: normal;
             font-size: 12px;
-            line-height: 16px;
             color: #4a4a4a;
           }
         }
@@ -104,14 +103,18 @@
           font-family: Open Sans;
           font-style: normal;
           font-weight: normal;
-          display: flex;
+          color: #a0b0b9;
+          display: grid;
+          grid-template-columns: repeat(2, 8rem);
+          grid-column-gap: 0rem;
 
           &__score {
-            font-size: 16px;
+            font-size: 20px;
+            line-height: 28px;
           }
           &__text {
             font-size: 12px;
-            color: #a0b0b9;
+            line-height: 16px;
           }
         }
       }

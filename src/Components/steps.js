@@ -3,6 +3,7 @@ import { steps } from "./../data";
 
 const Steps = () => {
   const [step, setStep] = useState(steps);
+  // const [percent, setPercent] = useState(steps);
   return (
     <div className="steps__container">
       {step.map((item) => {
@@ -18,8 +19,10 @@ const Steps = () => {
                       const { icon1, icon2 } = item;
                       return (
                         <>
-                          <div className="oval">{icon1}</div>
-                          <div className="line">{icon2}</div>
+                          <div className="col-1__oval">
+                            <div className="col-1__oval--icon">{icon1}</div>
+                          </div>
+                          <div className="col-1__line">{icon2}</div>
                         </>
                       );
                     })}
@@ -43,11 +46,13 @@ const Steps = () => {
                                             {actionValue}
                                           </div>
                                           <div className="action__percent">
-                                            <div className="rectangle">
-                                              <span className="text">
-                                                {percent}
-                                              </span>
-                                            </div>
+                                            {percent && (
+                                              <div className="action__percent--rectangle">
+                                                <span className="action__percent--text">
+                                                  {percent}
+                                                </span>
+                                              </div>
+                                            )}
                                           </div>
                                         </>
                                       );
@@ -112,7 +117,7 @@ const Steps = () => {
                                             className="right-contents__help--text"
                                             key={id}
                                           >
-                                            {text + ", "}
+                                            {text}
                                           </div>
                                         </>
                                       );
